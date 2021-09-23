@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer, useState,useRef } from 'react';
 import {connect} from 'react-redux'
 import NavBar from './NavBar';
 import styled from 'styled-components'
@@ -7,6 +7,9 @@ import Guppy from '../asset/icon/score/guppy.svg';
 import Betta from '../asset/icon/score/betta.png';
 import { css } from "@emotion/react";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import {FaLink} from 'react-icons/fa';
+import ReactDOM from 'react-dom';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 const Result = (props) =>{
 
     
@@ -76,6 +79,38 @@ const override = css`
 
         }
     `;
+    const Shared = styled.div`
+        display:flex;
+        margin:10px;
+        justify-content:space-evenly;
+        div{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+    `;
+    const Btn = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:40px;
+    height:40px;
+    border-radius: 25px; 
+    border: 1px solid #ECECF5;
+
+    `;
+    const Caption = styled.div`
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    font-size: 14px; 
+    font-weight:bold;
+    margin-top: 8px; 
+    `
+
+
+
 
     const result = {
         1:{
@@ -107,6 +142,9 @@ const override = css`
     }
     
 
+        
+
+
     return(
         <>
      
@@ -123,13 +161,28 @@ const override = css`
                         <div><h3>"{myScore.name}"</h3></div>
                         <div>{myScore.description}</div>
                         </DescriptionBox>
-
-                        <a id="create-kakao-link-btn" onClick={()=>{shareKakao()}}>
-                        <img
-                            src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-                        />
-                        </a>
-          
+                        <Shared>
+                            <div>
+                            <a id="create-kakao-link-btn" onClick={()=>{shareKakao()}}>
+                            <img
+                            style={{width:'40px'}}
+                                src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+                            />
+                            </a>
+                            <Caption>카카오톡</Caption>
+                            </div>
+                            
+                            <div>
+                                <Btn onClick={()=>{alert("링크가 복사되었습니다.")}}>
+                                    <CopyToClipboard text="https://test.fishhi.kr" >
+                                        <FaLink size="30px"/>
+                                    </CopyToClipboard>
+                                </Btn>
+                                <Caption>링크복사</Caption>
+                            </div>
+                        </Shared>
+                        
+                        
                     </>
                     )
                     :(
