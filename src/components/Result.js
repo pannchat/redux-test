@@ -20,20 +20,15 @@ let [loading, setLoading] = useState(false);
         setLoading(true);
     },2000)
 
-    window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
+    // window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
     },[])
-    const shareKakao = () =>{
-        window.Kakao.Link.createCustomButton({
-            container: '#create-kakao-link-btn',
-            templateId: 642480,
-            templateArgs: {
-                title:
-                '판교 맛집에 들르다. 다양하고 풍부한 퓨전 한정식. 깔끔한 내부 인테리어 라이언',
-                description:
-                '부담없는 가격에 푸짐하게 즐기는 점심메뉴 런치한정식, 불고기정식, 돼지 김치찌개 등',
-            },
-            })
-        }
+    // const shareKakao = () =>{
+    //     window.Kakao.Link.createCustomButton({
+    //         container: '#create-kakao-link-btn',
+    //         templateId: 642480,
+
+    //       })
+    //     }
     
 
 const override = css`
@@ -127,6 +122,11 @@ const override = css`
             name:'베타',
             description:'당신은 어항 속의 작은 왕 베타입니다. 베타라는 이름은 끈질긴 물고기라는 뜻을 가지고 있대요. ',
             img : Betta
+        },
+        4:{
+            name:'괴물',
+            description:'당신은 어항 속의 작은 왕 베타입니다. 베타라는 이름은 끈질긴 물고기라는 뜻을 가지고 있대요. ',
+            img : Betta
         }
     }
     let myScore = {};
@@ -162,7 +162,7 @@ const override = css`
                         <div>{myScore.description}</div>
                         </DescriptionBox>
                         <Shared>
-                            <div>
+                            {/* <div>
                             <a id="create-kakao-link-btn" onClick={()=>{shareKakao()}}>
                             <img
                             style={{width:'40px'}}
@@ -170,7 +170,7 @@ const override = css`
                             />
                             </a>
                             <Caption>카카오톡</Caption>
-                            </div>
+                            </div> */}
                             
                             <div>
                                 <Btn onClick={()=>{alert("링크가 복사되었습니다.")}}>

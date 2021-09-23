@@ -11,6 +11,7 @@ import tretocephalus from '../asset/img/tretocephalus.jpeg';
 import guppy from '../asset/img/guppy.png';
 import anci from '../asset/img/anci.jpeg';
 import platty from '../asset/img/platty.jpeg';
+import gourami from '../asset/img/gourami.jpeg';
 
 const SubTitle = styled.article`
 text-align:center;
@@ -79,58 +80,66 @@ const Bottom = styled.footer`
 const arr = [
     {
         "id" : 0,
-        "image" : 'https://www.livefishdirect.com/wp-content/uploads/2020/06/Green-neon-tetra.jpg',
-        "list" : {1:'카디널 테트라', 2:'네온 테트라', 3:'그린 네온 테트라'},
-        "answer" : 3
-    },
-    {
-        "id" : 1,
-        "image" : 'https://cdn.shopify.com/s/files/1/1163/2672/products/Sterbai-Corydora-Small-3_1024x1024.jpg?v=1602175504',
-        "list" : {1:'스터바이 코리도라스', 2:'청소 물고기', 3:'팬더 코리도라스'},
-        "answer" : 1
-    },
-    {
-        "id" : 2,
-        "image" : pandatetra,
-        "list" : {1:'하스타투스 코리도라스', 2:'팬더 테트라', 3:'라스보라 헹겔리'},
-        "answer" : 2
-    },
-    {
-        "id" : 3,
-        "image" : duplicareus,
-        "list" : {1:'하스타투스 코리도라스', 2:'듀플리 코리도라스', 3:'아돌포이 코리도라스'},
-        "answer" : 2
-    },
-    {
-        "id" : 4,
-        "image" : algaeeater,
-        "list" : {1:'시아미즈 알지이터', 2:'오토싱클루스', 3:'돌고기'},
-        "answer" : 1
-    },
-    {
-        "id" : 5,
-        "image" : tretocephalus,
-        "list" : {1:'키포틸라피아 프론토사', 2:'피그미썬피쉬', 3:'네오란프로로그스 트레트케파르스'},
-        "answer" : 3
-    },
-    {
-        "id" : 6,
         "image" : guppy,
         "list" : {1:'구피', 2:'베타', 3:'플래티'},
         "answer" : 1
     },
     {
-        "id" : 7,
+        "id" : 1,
         "image" : anci,
         "list" : {1:'똥먹는 물고기', 2:'안시스투루스(안시)', 3:'골드 스트라이프 코리도라스'},
         "answer" : 2
     },
     {
-        "id" : 8,
+        "id" : 2,
         "image" : platty,
         "list" : {1:'풍선 몰리', 2:'플래티', 3:'구피'},
         "answer" : 2
     },
+    {
+        "id" : 3,
+        "image" : 'https://www.livefishdirect.com/wp-content/uploads/2020/06/Green-neon-tetra.jpg',
+        "list" : {1:'카디널 테트라', 2:'네온 테트라', 3:'그린 네온 테트라'},
+        "answer" : 3
+    },
+    {
+        "id" : 4,
+        "image" : 'https://cdn.shopify.com/s/files/1/1163/2672/products/Sterbai-Corydora-Small-3_1024x1024.jpg?v=1602175504',
+        "list" : {1:'스터바이 코리도라스', 2:'청소 물고기', 3:'팬더 코리도라스'},
+        "answer" : 1
+    },
+    {
+        "id" : 5,
+        "image" : pandatetra,
+        "list" : {1:'하스타투스 코리도라스', 2:'팬더 테트라', 3:'라스보라 헹겔리'},
+        "answer" : 2
+    },
+    {
+        "id" : 6,
+        "image" : duplicareus,
+        "list" : {1:'하스타투스 코리도라스', 2:'듀플리 코리도라스', 3:'아돌포이 코리도라스'},
+        "answer" : 2
+    },
+    {
+        "id" : 7,
+        "image" : algaeeater,
+        "list" : {1:'시아미즈 알지이터', 2:'오토싱클루스', 3:'돌고기'},
+        "answer" : 1
+    },
+    {
+        "id" : 8,
+        "image" : tretocephalus,
+        "list" : {1:'키포틸라피아 프론토사', 2:'피그미썬피쉬', 3:'네오란프로로그스 트레트케파르스'},
+        "answer" : 3
+    },
+    {
+        "id" : 9,
+        "image" : gourami,
+        "list" : {1:'피그미 구라미 ', 2:'커피 구라미', 3:'초콜릿 구라미'},
+        "answer" : 3
+    },
+    
+
     
     
 ];
