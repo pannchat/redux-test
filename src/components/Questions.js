@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 import NavBar from './NavBar';
 import pandatetra from '../asset/img/pandatetra.jpeg'
 import duplicareus from '../asset/img/duplicareus.jpeg'
-import algaeeater from '../asset/img/algaeeater.png';
+import algaeeater from '../asset/img/algaeeater.jpeg';
 import tretocephalus from '../asset/img/tretocephalus.jpeg';
 import guppy from '../asset/img/guppy.png';
 import anci from '../asset/img/anci.jpeg';
