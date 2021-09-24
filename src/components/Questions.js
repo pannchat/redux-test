@@ -4,7 +4,7 @@ import {FaArrowAltCircleRight,FaInstagram,FaRegSadTear,FaSpinner} from 'react-ic
 import { useHistory } from 'react-router';
 import {connect} from 'react-redux'
 import NavBar from './NavBar';
-import pandatetra from '../asset/img/pandatetra.jpeg'
+import kitty from '../asset/img/kitty.png'
 import duplicareus from '../asset/img/duplicareus.jpeg'
 import algaeeater from '../asset/img/algaeeater.jpeg';
 import tretocephalus from '../asset/img/tretocephalus.jpeg';
@@ -114,8 +114,8 @@ const arr = [
     },
     {
         "id" : 5,
-        "image" : pandatetra,
-        "list" : {1:'하스타투스 코리도라스', 2:'팬더 테트라', 3:'라스보라 헹겔리'},
+        "image" : kitty,
+        "list" : {1:'하스타투스 코리도라스', 2:'키티 테트라', 3:'라스보라 헹겔리'},
         "answer" : 2
     },
     {
