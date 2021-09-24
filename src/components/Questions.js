@@ -45,7 +45,9 @@ const Title = styled.article`
 const ButtonContainer = styled.div`
 margin-top:10px;
 `;
-
+const QuestionImg = styled.img`
+    width:100%;
+`;
 const NextButton = styled.button`
     width:100%;
     height:45px;
@@ -184,7 +186,7 @@ const Questions = (props) => {
         </Title>
         
 
-        <img src={data.image} />
+        <QuestionImg src={data.image} />
         <ButtonContainer>
 
             {Object.entries(data.list).map(e=>{
