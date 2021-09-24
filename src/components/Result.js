@@ -5,13 +5,17 @@ import styled from 'styled-components'
 import Shrimp from '../asset/icon/score/Shrimp.svg'
 import Guppy from '../asset/icon/score/guppy.svg';
 import Betta from '../asset/icon/score/betta.png';
+import Channa from '../asset/icon/score/channa.png';
 import { css } from "@emotion/react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import {FaLink} from 'react-icons/fa';
+import {MdReplay} from 'react-icons/md';
 import ReactDOM from 'react-dom';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
-const Result = (props) =>{
+import { useHistory } from 'react-router';
 
+const Result = (props) =>{
+let history = useHistory();
     
 let [loading, setLoading] = useState(false);
     useEffect(()=>{
@@ -20,15 +24,20 @@ let [loading, setLoading] = useState(false);
         setLoading(true);
     },2000)
 
-    // window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
-    },[])
-    // const shareKakao = () =>{
-    //     window.Kakao.Link.createCustomButton({
-    //         container: '#create-kakao-link-btn',
-    //         templateId: 642480,
 
-    //       })
-    //     }
+    },[])
+    
+    const shareKakao = () =>{
+        try {
+            if (window.Kakao) {
+                window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
+            };
+        } catch(e) {};
+        window.Kakao.Link.sendCustom({
+            templateId: 62153
+        });
+
+    }
     
 
 const override = css`
@@ -115,18 +124,18 @@ const override = css`
         },
         2:{
             name:'구피',
-            description:'당신은 국민 열대어 구피입니다. 어린 새우 정도는 잡아 먹을 수 있어요.',
+            description:'당신은 국민 열대어 구피입니다. 구피는 전 세계에서 가장 대중적인 관상어에요. 구피는 모기 유충을 퇴치하는 용도로 처음 전파되었다고 합니다.',
             img : Guppy
         },
         3:{
             name:'베타',
-            description:'당신은 어항 속의 작은 왕 베타입니다. 베타라는 이름은 끈질긴 물고기라는 뜻을 가지고 있대요. ',
+            description:'당신은 어항 속의 작은 왕 베타입니다. 베타라는 이름은 끈질긴 물고기라는 뜻을 가지고 있대요. 베타는 라비린스라는 보조 호흡기관을 가지고 있어서 수면 위의 공기를 호흡할 수 있어요.',
             img : Betta
         },
         4:{
-            name:'괴물',
-            description:'당신은 어항 속의 작은 왕 베타입니다. 베타라는 이름은 끈질긴 물고기라는 뜻을 가지고 있대요. ',
-            img : Betta
+            name:'찬나 펄크라',
+            description:'당신은 찬나 펄크라에요. 중형의 스네이크 헤드로 성장할수록 푸른빛으로 변해가는 모습이 일품이래요. 체질이 강하고 먹성이 좋으며 성격이 다소 난폭한 편이므로 합사시 주의를 요합니다. 찬나 펄크라는 두자광폭에 사육 가능할까요? (출처 : 매직아쿠아)',
+            img : Channa
         }
     }
     let myScore = {};
@@ -137,7 +146,7 @@ const override = css`
     }
     else if(6<=props.score && props.score <= 8){
         myScore = result[3];
-    }else if(props.score === 9 ){
+    }else if(props.score >= 9 ){
         myScore = result[4];
     }
     
@@ -162,7 +171,7 @@ const override = css`
                         <div>{myScore.description}</div>
                         </DescriptionBox>
                         <Shared>
-                            {/* <div>
+                            <div>
                             <a id="create-kakao-link-btn" onClick={()=>{shareKakao()}}>
                             <img
                             style={{width:'40px'}}
@@ -170,7 +179,7 @@ const override = css`
                             />
                             </a>
                             <Caption>카카오톡</Caption>
-                            </div> */}
+                            </div>
                             
                             <div>
                                 <Btn onClick={()=>{alert("링크가 복사되었습니다.")}}>
@@ -179,6 +188,13 @@ const override = css`
                                     </CopyToClipboard>
                                 </Btn>
                                 <Caption>링크복사</Caption>
+                            </div>
+
+                            <div>
+                                <Btn onClick={()=>{history.push('/')}}>
+                                        <MdReplay size="30px"/>
+                                </Btn>
+                                <Caption>다시하기</Caption>
                             </div>
                         </Shared>
                         

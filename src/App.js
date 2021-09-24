@@ -7,6 +7,7 @@ import Questions from './components/Questions';
 import Result from './components/Result';
 import Aquarium from './asset/icon/aquarium.svg';
 import NavBar from './components/NavBar';
+import Betta from './asset/icon/score/betta.png'
 const Main = styled.main`
 
   display:flex;
@@ -117,12 +118,12 @@ const Start = () => {
     <Title>
         [관상어]고인물 테스트
     </Title>
-    <MainLogo src={Aquarium}/>
+    <MainLogo src={Betta}/>
     <SubTitle>나는 담수 관상어에 대해 <br/>얼마나 잘 아는지 테스트해보세요.</SubTitle>
 
     <ButtonContainer>
         <NextButton onClick={()=>history.push('apistogramma')}><span>검 사 시 작</span><FaArrowAltCircleRight className="icons" size="25px"/></NextButton>
-        <NextButton><span>인스타그램</span><FaInstagram className="icons" size="25px"/></NextButton>
+        <NextButton onClick={()=>{window.location.href="https://www.instagram.com/fish._.hi/"}}><span>인스타그램</span><FaInstagram className="icons" size="25px"/></NextButton>
         <Smsign>앞으로 더 재밌는 테스트와 다양한 서비스를 만들어 볼 예정입니다. 인스타그램 팔로우 해주세용</Smsign>
     </ButtonContainer>
     </>
