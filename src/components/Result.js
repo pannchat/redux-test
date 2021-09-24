@@ -8,7 +8,7 @@ import Betta from '../asset/icon/score/betta.png';
 import Channa from '../asset/icon/score/channa.png';
 import { css } from "@emotion/react";
 import ScaleLoader from "react-spinners/ScaleLoader";
-import {FaLink} from 'react-icons/fa';
+import {FaLink,FaInstagram} from 'react-icons/fa';
 import {MdReplay} from 'react-icons/md';
 import ReactDOM from 'react-dom';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
@@ -102,6 +102,7 @@ const override = css`
     height:40px;
     border-radius: 25px; 
     border: 1px solid #ECECF5;
+    cursor:pointer;
 
     `;
     const Caption = styled.div`
@@ -196,8 +197,16 @@ const override = css`
                                 </Btn>
                                 <Caption>다시하기</Caption>
                             </div>
+                            <div>
+                                <Btn onClick={()=>{window.location.href="https://www.instagram.com/fish._.hi/"}}>
+                                        <FaInstagram size="30px"/>
+                                </Btn>
+                                <Caption>인스타그램</Caption>
+                            </div>
                         </Shared>
-                        
+                        <Shared>
+                            네이버 검색창에 '피쉬하이'
+                        </Shared>
                         
                     </>
                     )
