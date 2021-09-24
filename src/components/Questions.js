@@ -12,6 +12,8 @@ import guppy from '../asset/img/guppy.png';
 import anci from '../asset/img/anci.jpeg';
 import platty from '../asset/img/platty.jpeg';
 import gourami from '../asset/img/gourami.jpeg';
+import tetra from '../asset/img/tetra.jpeg';
+import sterbai from '../asset/img/sterbai.jpeg';
 
 const SubTitle = styled.article`
 text-align:center;
@@ -98,13 +100,13 @@ const arr = [
     },
     {
         "id" : 3,
-        "image" : 'https://www.livefishdirect.com/wp-content/uploads/2020/06/Green-neon-tetra.jpg',
+        "image" : tetra,
         "list" : {1:'카디널 테트라', 2:'네온 테트라', 3:'그린 네온 테트라'},
         "answer" : 3
     },
     {
         "id" : 4,
-        "image" : 'https://cdn.shopify.com/s/files/1/1163/2672/products/Sterbai-Corydora-Small-3_1024x1024.jpg?v=1602175504',
+        "image" : sterbai,
         "list" : {1:'스터바이 코리도라스', 2:'청소 물고기', 3:'팬더 코리도라스'},
         "answer" : 1
     },
