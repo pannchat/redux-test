@@ -124,7 +124,7 @@ const Start = () => {
     <ButtonContainer>
         <NextButton onClick={()=>history.push('apistogramma')}><span>검 사 시 작</span><FaArrowAltCircleRight className="icons" size="25px"/></NextButton>
         <NextButton onClick={()=>{window.location.href="https://www.instagram.com/fish._.hi/"}}><span>인스타그램</span><FaInstagram className="icons" size="25px"/></NextButton>
-        <Smsign>앞으로 더 재밌는 테스트와 다양한 서비스를 만들어 볼 예정입니다. 인스타그램 팔로우 해주세용</Smsign>
+        {/* <Smsign>앞으로 더 재밌는 테스트와 다양한 서비스를 만들어 볼 예정입니다. 인스타그램 팔로우 해주세용</Smsign> */}
     </ButtonContainer>
     </>
     );
